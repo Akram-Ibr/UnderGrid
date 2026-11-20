@@ -1,6 +1,6 @@
 # UnderGrid
 
-**Live app: https://undergridai.onrender.com**
+**Live app: https://undergrid-nbpf.onrender.com/**
 
 UnderGrid is a crowdsourced survival grid for people living underground. Residents report what they actually see: floods, outages, bad water, heat, spare supplies. A report only goes public once three different people confirm it. Those confirmed numbers then decide how power, water and food get shared (deepest levels first), when to warn people, and which tunnels are safe to walk. It keeps working when the network is cut.
 
@@ -14,7 +14,7 @@ Built for Patriot HackFest Fall 2026, track *Life Underground*, route *Sustainab
 
 ## Try it
 
-Open **https://undergridai.onrender.com** on any phone or computer. No install, no account. Send a report on one device and it shows up on the others within a few seconds. Have two or three people confirm it and it turns verified.
+Open **https://undergrid-nbpf.onrender.com/** on any phone or computer. No install, no account. Send a report on one device and it shows up on the others within a few seconds. Have two or three people confirm it and it turns verified.
 
 - The server runs on a free plan, so the first load after it's been idle can take about 30 seconds.
 - **Desktop-style options:** Chrome and Edge offer "Install UnderGrid" in the address bar. `UnderGrid.html` (in the repo) is the same app as a single file you can double-click. It already points at the live server, so it syncs on its own and still works with no internet.
