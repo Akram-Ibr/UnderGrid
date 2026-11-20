@@ -1,0 +1,12 @@
+# One-click hosting on Render. Connect the GitHub repo, and Render builds and serves UnderGrid at a public URL.
+services:
+  - type: web
+    name: undergrid
+    runtime: node
+    plan: free
+    buildCommand: npm install --no-audit --no-fund && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22

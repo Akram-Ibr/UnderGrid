@@ -1,0 +1,52 @@
+{
+  "name": "undergrid-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UnderGrid desktop app",
+  "main": "main.cjs",
+  "author": "UnderGrid team",
+  "scripts": {
+    "start": "node prepare.mjs && node ensure-electron.mjs && electron .",
+    "dist": "node prepare.mjs && electron-builder"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "org.undergrid.app",
+    "productName": "UnderGrid",
+    "directories": {
+      "output": "../release"
+    },
+    "files": [
+      "main.cjs",
+      "config.json",
+      "app/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signAndEditExecutable": false,
+      "icon": "app/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "artifactName": "UnderGrid-${version}-${os}-${arch}.${ext}"
+  }
+}

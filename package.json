@@ -1,0 +1,26 @@
+{
+  "name": "undergrid",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UnderGrid: offline-first, crowdsourced survival grid for the Hollow (Patriot HackFest Fall 2026)",
+  "workspaces": [
+    "web",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -w web",
+    "start": "npm run start -w server",
+    "test": "npm run test -w web",
+    "typecheck": "npm run typecheck -w web",
+    "desktop": "npm run build && npm install --prefix desktop --no-audit --no-fund && npm start --prefix desktop",
+    "desktop:run": "npm start --prefix desktop",
+    "dist:desktop": "npm run build && npm install --prefix desktop --no-audit --no-fund && npm run dist --prefix desktop",
+    "start:lan": "node server/index.js --lan",
+    "build:single": "npm run build:single -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "author": "UnderGrid team"
+}
